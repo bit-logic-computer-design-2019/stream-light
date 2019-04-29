@@ -1,0 +1,1806 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Apr 25 09:47:27 2019
+# Process ID: 13160
+# Current directory: E:/vivado/light_stream2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7652 E:\vivado\light_stream2\light_stream2.xpr
+# Log file: E:/vivado/light_stream2/vivado.log
+# Journal file: E:/vivado/light_stream2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/vivado/light_stream2/light_stream2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 780.063 ; gain = 181.828
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Apr 25 11:53:54 2019] Launched synth_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Thu Apr 25 11:58:16 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -jobs 4
+[Thu Apr 25 12:10:28 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1722.867 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1722.867 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.867 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:34 ; elapsed = 00:00:24 . Memory (MB): peak = 1849.977 ; gain = 935.473
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+place_ports run V1
+set_property IOSTANDARD LVCMOS33 [get_ports [list run]]
+place_ports btn_up R17
+set_property IOSTANDARD LVCMOS33 [get_ports [list btn_up]]
+place_ports btn_down U4
+set_property IOSTANDARD LVCMOS33 [get_ports [list btn_down]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1914.895 ; gain = 0.000
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Apr 25 12:16:51 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1917.074 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {E:/vivado/light_stream2/light_stream2.runs/impl_1/light_stream.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/vivado/light_stream2/light_stream2.runs/impl_1/light_stream.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module light_stream1
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'led' is not permitted [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:41]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2878.004 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module light_stream1
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.test_posedge
+Compiling module xil_defaultlib.cal_level
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream1
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim/xsim.dir/light_stream_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Apr 25 12:34:30 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 2878.391 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 2907.867 ; gain = 29.477
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2958.434 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module light_stream1
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.test_posedge
+Compiling module xil_defaultlib.cal_level
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream1
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2958.434 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module light_stream1
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.test_posedge
+Compiling module xil_defaultlib.cal_level
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream1
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3166.113 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module light_stream1
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream1_behav xil_defaultlib.light_stream1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.test_posedge
+Compiling module xil_defaultlib.cal_level
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream1_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim/xsim.dir/light_stream1_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Apr 25 12:40:15 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3166.113 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream1_behav -key {Behavioral:sim_1:Functional:light_stream1} -tclbatch {light_stream1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 3166.113 ; gain = 0.000
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3166.113 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream1_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream1_behav xil_defaultlib.light_stream1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream1_behav -key {Behavioral:sim_1:Functional:light_stream1} -tclbatch {light_stream1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream1_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream1_behav xil_defaultlib.light_stream1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream1_behav -key {Behavioral:sim_1:Functional:light_stream1} -tclbatch {light_stream1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+current_sim simulation_3
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.test_posedge
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.test_posedge
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.test_posedge
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'test1' [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:52]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3166.113 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/vivado/light_stream2/light_stream2.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Apr 25 13:29:44 2019] Launched synth_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs synth_1 -jobs 4
+[Thu Apr 25 13:31:08 2019] Launched synth_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/vivado/light_stream2/light_stream2.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Apr 25 13:32:19 2019] Launched synth_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Thu Apr 25 13:33:36 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'light_stream' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj light_stream_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module test_edge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 451ed089fd6843c2be1134d1275605f8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot light_stream_behav xil_defaultlib.light_stream xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.test_posedge
+Compiling module xil_defaultlib.test_edge
+Compiling module xil_defaultlib.cal_level
+Compiling module xil_defaultlib.cal_interval
+Compiling module xil_defaultlib.light_stream
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot light_stream_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/vivado/light_stream2/light_stream2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "light_stream_behav -key {Behavioral:sim_1:Functional:light_stream} -tclbatch {light_stream.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source light_stream.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'light_stream_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3166.113 ; gain = 0.000
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcsg324-1
+Top: light_stream
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3230.648 ; gain = 64.535
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'light_stream' [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:58]
+INFO: [Synth 8-6157] synthesizing module 'test_posedge' [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'test_posedge' (1#1) [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:92]
+INFO: [Synth 8-6157] synthesizing module 'test_edge' [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'test_edge' (2#1) [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:109]
+INFO: [Synth 8-6157] synthesizing module 'cal_level' [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:171]
+INFO: [Synth 8-6155] done synthesizing module 'cal_level' (3#1) [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:171]
+INFO: [Synth 8-6157] synthesizing module 'cal_interval' [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:126]
+WARNING: [Synth 8-6090] variable 'counter' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'cal_interval' (4#1) [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:126]
+WARNING: [Synth 8-6014] Unused sequential element led_reg was removed.  [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:78]
+WARNING: [Synth 8-3848] Net clk in module/entity light_stream does not have driver. [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:59]
+WARNING: [Synth 8-3848] Net rst in module/entity light_stream does not have driver. [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:59]
+WARNING: [Synth 8-3848] Net run in module/entity light_stream does not have driver. [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:59]
+WARNING: [Synth 8-3848] Net btn_up in module/entity light_stream does not have driver. [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:59]
+WARNING: [Synth 8-3848] Net btn_down in module/entity light_stream does not have driver. [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'light_stream' (5#1) [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3270.383 ; gain = 104.270
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin test1:clk to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:65]
+WARNING: [Synth 8-3295] tying undriven pin test1:objective to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:65]
+WARNING: [Synth 8-3295] tying undriven pin test2:clk to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:66]
+WARNING: [Synth 8-3295] tying undriven pin test2:objective to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:66]
+WARNING: [Synth 8-3295] tying undriven pin test3:clk to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:67]
+WARNING: [Synth 8-3295] tying undriven pin test3:objective to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:67]
+WARNING: [Synth 8-3295] tying undriven pin test4:clk to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:68]
+WARNING: [Synth 8-3295] tying undriven pin test5:clk to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:69]
+WARNING: [Synth 8-3295] tying undriven pin cal_lv1:clk to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:71]
+WARNING: [Synth 8-3295] tying undriven pin cal_lv1:rst to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:71]
+WARNING: [Synth 8-3295] tying undriven pin cal_ter1:rst to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:72]
+WARNING: [Synth 8-3295] tying undriven pin cal_ter1:clk to constant 0 [E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v:72]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3270.383 ; gain = 104.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3270.383 ; gain = 104.270
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'run'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'run'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_up'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_up'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_down'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_down'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3397.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3397.539 ; gain = 231.426
+13 Infos, 45 Warnings, 26 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3397.539 ; gain = 231.426
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+[Thu Apr 25 13:36:38 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/vivado/light_stream2/light_stream2.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Apr 25 13:44:28 2019] Launched synth_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'run'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'run'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_up'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_up'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_down'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_down'. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/vivado/light_stream2/light_stream2.srcs/constrs_1/new/light_stream.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3397.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3490.316 ; gain = 92.777
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+launch_runs impl_1 -jobs 4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 4054.180 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4059.328 ; gain = 0.000
+[Thu Apr 25 13:45:59 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/vivado/light_stream2/light_stream2.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Apr 25 13:49:23 2019] Launched synth_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Apr 25 13:50:25 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Apr 25 13:51:54 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/vivado/light_stream2/light_stream2.runs/impl_1/light_stream.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/vivado/light_stream2/light_stream2.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Apr 25 15:01:57 2019] Launched synth_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/vivado/light_stream2/light_stream2.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Apr 25 15:03:17 2019] Launched synth_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Apr 25 15:04:16 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Apr 25 15:05:48 2019] Launched impl_1...
+Run output will be captured here: E:/vivado/light_stream2/light_stream2.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/vivado/light_stream2/light_stream2.runs/impl_1/light_stream.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
