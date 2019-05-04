@@ -9,7 +9,9 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{multirow}
-
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{subfigure}
+\usepackage{float}
 % \setCJKmainfont{SimSun} %设置 CJK 主字体为 SimSun （宋体）
 % \pagestyle{empty}                   %不设置页眉页脚
 % \usepackage{amsmath, amsthm, amssymb, amsfonts} %数学公式
@@ -108,7 +110,9 @@
 \section{设计目的}
 
 1、熟悉一次完整的FPGA开发流程，从新建工程，代码设计，综合实现，管脚约束，下载FPGA程序。
+
 2、熟悉Xilinx Vivado开发环境，Verilog语言编程基本框架。
+
 3、熟悉EES-338口袋计算机硬件平台。
 
 每次上电，按一下rst复位键，LED0~LED7全亮，按住run键，则流水灯从左向右滚动，滚到最右，自动向左滚，滚到左侧，再向右滚动，周而复始。
@@ -131,91 +135,115 @@ EES-338口袋计算机硬件平台，配备 FPGA (XC7A35TCSG324-1C)
 \subsection{描述需求}
 
 led灯一共有9个状态，需要控制状态转换的信号(move)以及使信号有效的使能(run)。速度等级level由btnup btndown分别控制。
+
 \subsection{定义输入与输出}
 
-\begin{figure}[htbp]
+见图\ref{FIG.1}、\ref{FIG.2}。
+
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{流水灯控制输入变量.PNG}
-    \caption{流水灯控制输入变量}
+    \subfigure[流水灯输入变量]{
+        \includegraphics[width=0.45\textwidth]{流水灯控制输入变量.PNG}
+        % \caption{流水灯控制输入变量}
+        \label{FIG.1}
+    }
+    \subfigure[流水灯输出变量]{
+        \includegraphics[width=0.45\textwidth]{流水灯输出变量.PNG}
+        % \caption{流水灯输出变量}
+        \label{FIG.2}
+    }
+    \caption{流水灯变量分析}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=0.7]{流水灯输出变量.PNG}
-    \caption{流水灯输出变量}
-\end{figure}
 
 
 % GRAGH
 \subsection{状态机图}
 % GRAGH
+见图\ref{FIG.3}、\ref{FIG.4}。
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{state状态表及布尔表达式.PNG}
+    \includegraphics[scale=0.5]{state状态表及布尔表达式.PNG}
     \caption{state状态表及布尔表达式}
+    \label{FIG.3}
 \end{figure}
 
-\begin{center}  
-\begin{figure}[htbp]
-    % \centering
-    \includegraphics[scale=0.25]{状态机图.jpg}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.2]{状态机图.jpg}
     \caption{状态机图}
+    \label{FIG.4}
 \end{figure}
-\end{center}
 \subsection{程序实现}
 
-% code
+见附件中代码。
 
 \subsection{仿真与测试}
 \subsubsection{各模块RTL图}
-\begin{figure}[htbp]
+
+见图\ref{FIG.5}、\ref{FIG.6}、\ref{FIG.7}、
+\ref{FIG.8}、\ref{FIG.9}。
+\begin{figure}[H]
+
     \centering
-    \includegraphics[scale=0.45]{cal_interval.PNG}
+    \includegraphics[scale=0.4]{cal_interval.PNG}
     \caption{cal interval}
+    \label{FIG.5}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45]{cal_level.PNG}
+    \includegraphics[scale=0.4]{cal_level.PNG}
     \caption{cal level}
+    \label{FIG.6}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45]{cal_move_period.PNG}
+    \includegraphics[scale=0.4]{cal_move_period.PNG}
     \caption{cal move period}
+    \label{FIG.7}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45]{overall.PNG}
+    \includegraphics[scale=0.4]{overall.PNG}
     \caption{overall}
+    \label{FIG.8}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45]{state_convert.PNG}
+    \includegraphics[scale=0.4]{state_convert.PNG}
     \caption{state convert}
+    \label{FIG.9}
 \end{figure}
 \subsubsection{测试}
-\begin{figure}[htbp]
+
+见图\ref{FIG.10}、\ref{FIG.11}。
+
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45]{test_edge.PNG}
+    \includegraphics[scale=0.4]{test_edge.PNG}
     \caption{test edge}
+    \label{FIG.10}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45]{test_posedge.PNG}
+    \includegraphics[scale=0.4]{test_posedge.PNG}
     \caption{test posedge}
+    \label{FIG.11}
 \end{figure}
 \subsection{综合与实现}
 \subsection{生成mcs文件烧录到flash}
 \subsection{运行结果显示}
+按照预期成功运行。
+
 \section{遇到的问题及解决方法}
 \subsection{Ambiguous clock in event control}
 
-https://stackoverflow.com/questions/27145548/ambiguous-clock-in-event-control
+\href{https://stackoverflow.com/questions/27145548/ambiguous-clock-in-event-control}{ambiguous-clock-in-event-control} 
 
 问题原因: 
 
