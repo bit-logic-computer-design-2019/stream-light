@@ -15,39 +15,37 @@
 
 \begin{titlepage}
 \center{北京理工大学计算机学院2017级}
-\vspace{0.5cm}
+\vspace{2cm}
 \center{\huge{《数字逻辑》实验一 实验报告}}
 \vspace{0.5cm}
 \center{\Huge{可调速循环流水灯}}
-\vspace{0.5cm}
-
+\vspace{2cm}
 \begin{center}
 \begin{large}
-\begin{tabular}{r c}
-小组编号& 44\\
-\cline{2-2}\\
+\begin{tabular}{c c |c c}
+小组编号& 44 & 指导老师 & 王娟\\
+\cline{2-2} \cline{4-4}
 \hline
-学\qquad 号& 1120173323 \\
-\cline{2-2}\\
-姓\qquad 名& 王聚海 \\
-\cline{2-2}\\
-班\qquad 级 & 07111703\\
-\cline{2-2}\\
+学\qquad 号& 1120173323 & 电\qquad 话& 592175501@qq.com \\
+\cline{2-2} \cline{4-4}
+姓\qquad 名& 王聚海 & 邮\qquad 箱& 13521592752 \\
+\cline{2-2} \cline{4-4}
+班\qquad 级 & 07111703 \\
+\cline{2-2}
 \hline
 学\qquad 号& 1120171224 \\
-\cline{2-2}\\
+\cline{2-2}
 姓\qquad 名& 冯开宇 \\
-\cline{2-2}\\ 
+\cline{2-2}
 班\qquad 级 & 07111701 \\
-\cline{2-2}\\
+\cline{2-2}
 \hline
 学\qquad 号& 1120172200 \\
-\cline{2-2}\\
+\cline{2-2}
 姓\qquad 名& 刘思雨 \\
-\cline{2-2}\\ 
+\cline{2-2}
 班\qquad 级 & 07111701 \\
-\cline{2-2}\\
-
+\cline{2-2}
 \end{tabular}
 \end{large}
 \end{center}
@@ -180,22 +178,28 @@ led灯一共有9个状态，需要控制状态转换的信号(move)以及使信�
     \caption{state convert}
     \label{FIG.9}
 \end{figure}
-\subsubsection{测试}
 
-见图\ref{FIG.10}、\ref{FIG.11}。
+信号边沿检测模块见图\ref{FIG.10}、\ref{FIG.11}。
+
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{test_edge.PNG}
-    \caption{test edge}
+    \caption{检测上升沿模块}
     \label{FIG.10}
 \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{test_posedge.PNG}
-    \caption{test posedge}
+    \caption{检测下降沿模块}
     \label{FIG.11}
 \end{figure}
+
+\subsubsection{测试}
+
+
+测试符合预期
+
 \subsection{综合与实现}
 \subsection{生成mcs文件烧录到flash}
 \subsection{运行结果显示}
@@ -233,6 +237,14 @@ AC可能同时为真则可能进入两个逻辑之中
 
 仿真时可用频率远高于所需时钟频率，
 需修改程序后方可仿真否则综合实现后频率过高无法察觉灯闪烁移动
+
+\section{收获和体会}
+
+通过完成实验一,
+ 我们小组成员基本了解了verilog的语法及vivado的使用规则和一般时序逻辑的设计方法。
+ 做实验的时候遇到了很多bug比如重驱动还有有歧义的时钟信号最终都得到了解决。
+  思路渐渐从面向过程的程序设计中解放出来，而学会从模块的角度去分析问题。  
+
 \section{小组成员分工}
 
 王聚海
@@ -245,6 +257,13 @@ AC可能同时为真则可能进入两个逻辑之中
 \begin{itemize}
     \item 文档撰写和排版
 \end{itemize}
+
+刘思雨
+\begin{itemize}
+    \item 资料收集及程序测试
+\end{itemize}
+
+
 
 \section{项目地址}
 
