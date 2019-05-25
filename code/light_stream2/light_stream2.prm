@@ -1,0 +1,14 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX1
+Size               8M
+Start Address      0x00000000
+End Address        0x007FFFFF
+Checksum           0x5E3266E9
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                                                                Checksum
+0x00000000    0x0021728B    Apr 25 21:52:30 2019    E:/vivado/light_stream2/light_stream2.runs/impl_1/light_stream1.bit    0x0003805D
+File Checksum Total                                                                                                        0x0003805D

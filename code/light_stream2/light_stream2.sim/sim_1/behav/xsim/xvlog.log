@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/light_stream2/light_stream2.srcs/sources_1/new/light_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module light_stream1
+INFO: [VRFC 10-311] analyzing module test_posedge
+INFO: [VRFC 10-311] analyzing module test_edge
+INFO: [VRFC 10-311] analyzing module cal_interval
+INFO: [VRFC 10-311] analyzing module cal_level
